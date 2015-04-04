@@ -17,5 +17,4 @@ RUN chmod u+x  /start.sh
 
 EXPOSE 5050
 
-RUN 
 CMD ["/start.sh"]
