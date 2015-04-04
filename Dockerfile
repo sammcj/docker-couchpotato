@@ -1,12 +1,8 @@
-FROM ubuntu:trusty
-MAINTAINER Tim Haak <tim@haak.co.uk>
+FROM debian:jessie
+MAINTAINER Sam Mcleod <@s_mcleod>
 
-RUN apt-get -q update
-RUN apt-get -qy --force-yes dist-upgrade
-
-RUN apt-get install -qy --force-yes  python git-core
+RUN apt-get update && apt-get install -y python git-core
 RUN git clone https://github.com/RuudBurger/CouchPotatoServer.git /CouchPotatoServer
-
 
 VOLUME /config
 VOLUME /data
